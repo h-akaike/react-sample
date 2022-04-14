@@ -1,13 +1,10 @@
 import { createStore } from "redux";
+import { count } from "./reducers";
 
-const initialState = {
-  count: 1,
-}
-
-const reducer = (state = initialState) => {
-  return state;
-};
-
-const store = createStore(reducer);
+const store = createStore(count, {
+  count: {
+    num: 0
+  }
+});
 
 export default store;
